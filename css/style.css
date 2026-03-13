@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f5f7fa;
+    --container-bg: #ffffff;
+    --text-color: #2c3e50;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --border-color: #dfe6e9;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a2e;
+    --container-bg: #16213e;
+    --text-color: #ffffff;
+    --primary-color: #5dade2;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --border-color: #2c3e50;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--container-bg);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+.greeting-section {
+    text-align: center;
+}
+
+#greeting {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+#datetime {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#userName {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--container-bg);
+    color: var(--text-color);
+    width: 300px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.timer-section {
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.timer-settings {
+    margin: 15px 0;
+}
+
+.timer-settings label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.timer-settings input {
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--container-bg);
+    color: var(--text-color);
+    width: 80px;
+}
+
+.timer-controls button {
+    padding: 12px 30px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+#startBtn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#stopBtn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+#resetBtn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--container-bg);
+    color: var(--text-color);
+}
+
+#addTodoBtn {
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#todoList {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: var(--bg-color);
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.todo-item.done .todo-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo-checkbox {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1em;
+}
+
+.todo-edit-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: var(--container-bg);
+    color: var(--text-color);
+}
+
+.todo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.todo-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.edit-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.save-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.link-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.link-input input {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--container-bg);
+    color: var(--text-color);
+}
+
+#addLinkBtn {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.link-item {
+    position: relative;
+    padding: 15px;
+    background: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.link-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.link-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.link-delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #greeting {
+        font-size: 2em;
+    }
+    
+    .timer-display {
+        font-size: 3em;
+    }
+    
+    .timer-controls button {
+        padding: 10px 20px;
+    }
+    
+    .links-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
